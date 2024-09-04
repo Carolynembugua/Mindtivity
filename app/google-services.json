@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "338858152754",
+    "project_id": "mindtivity-df61d",
+    "storage_bucket": "mindtivity-df61d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338858152754:android:16fa623bd36a46f6a9fd2b",
+        "android_client_info": {
+          "package_name": "com.example.mindtivity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_W0pOQzMGJ64zKLtJGLVNu01yzuATpqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
