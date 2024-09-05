@@ -42,25 +42,26 @@ import com.example.mindtivity.R
 import com.example.mindtivity.data.AuthViewModel
 import com.example.mindtivity.navigation.ROUT_LOGIN
 import com.example.mindtivity.ui.theme.orange
+import com.example.mindtivity.ui.theme.pastpurple
 
 
 @Composable
 fun SignupScreen(navController: NavController){
     Column(modifier = Modifier
         .fillMaxSize()
-        .paint(painterResource(id = R.drawable.img_3), contentScale = ContentScale.FillBounds),
+        .paint(painterResource(id = R.drawable.img_5), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally){
         Image(
-            painter = painterResource(id = R.drawable.icon) ,
+            painter = painterResource(id = R.drawable.img_4) ,
             contentDescription ="Icon",
             modifier = Modifier.size(200.dp)
         )
         Spacer(modifier = Modifier.height(10.dp))
         Text(
-            text = "SellApy",
+            text = "Mindtivity",
             fontSize = 40.sp,
             fontFamily = FontFamily.Cursive,
-            color = orange
+            color = pastpurple
         )
         Spacer(modifier = Modifier.height(10.dp))
 

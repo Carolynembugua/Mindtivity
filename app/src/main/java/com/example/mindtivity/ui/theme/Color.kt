@@ -13,3 +13,6 @@ val pastorange = Color(0xFF7D5260)
 val orange = Color(0xFF7D5260)
 val ory = Color(0xFFF74A3E)
 val pastory = Color(0xFFFF7D74)
+val purple = Color(0xFF8C6792)
+val pastpurple = Color(0xFFD29ADB)
+

@@ -45,19 +45,20 @@ import com.example.mindtivity.R
 import com.example.mindtivity.data.AuthViewModel
 import com.example.mindtivity.navigation.ROUT_SIGNUP
 import com.example.mindtivity.ui.theme.orange
+import com.example.mindtivity.ui.theme.pastpurple
 
 
 @Composable
 fun LoginScreen(navController: NavController){
    Column(modifier = Modifier
       .fillMaxSize()
-      .paint(painterResource(id = R.drawable.img_3), contentScale = ContentScale.FillBounds),
+      .paint(painterResource(id = R.drawable.img_5), contentScale = ContentScale.FillBounds),
    horizontalAlignment = Alignment.CenterHorizontally){
 
 
       Spacer(modifier = Modifier.height(10.dp))
       Image(
-         painter = painterResource(id = R.drawable.icon) ,
+         painter = painterResource(id = R.drawable.img_4) ,
          contentDescription ="Icon",
          modifier = Modifier.size(200.dp)
       )
@@ -66,7 +67,7 @@ fun LoginScreen(navController: NavController){
          text = "Welcome Back",
          fontSize = 40.sp,
          fontFamily = FontFamily.Cursive,
-         color = orange
+         color = pastpurple
       )
       Spacer(modifier = Modifier.height(10.dp))
 
@@ -79,10 +80,8 @@ fun LoginScreen(navController: NavController){
       Spacer(modifier = Modifier.height(10.dp))
 
 
-      var name by remember { mutableStateOf("") }
       var email by remember { mutableStateOf("") }
       var password by remember { mutableStateOf("") }
-      var confpassword by remember { mutableStateOf("") }
 
 
       Spacer(modifier = Modifier.height(10.dp))

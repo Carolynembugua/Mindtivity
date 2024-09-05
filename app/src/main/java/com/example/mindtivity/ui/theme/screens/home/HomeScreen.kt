@@ -30,6 +30,7 @@ import com.example.mindtivity.ui.theme.orange
 import com.example.mindtivity.ui.theme.pastorange
 import com.example.mindtivity.navigation.ROUT_LOGIN
 import com.example.mindtivity.ui.theme.pastory
+import com.example.mindtivity.ui.theme.pastpurple
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
@@ -38,13 +39,13 @@ fun HomeScreen(navController:NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(pastory),
+            .background(pastpurple),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ){
 
         Image(
-            painter =painterResource(id = R.drawable.icon) ,
+            painter =painterResource(id = R.drawable.img_4) ,
             contentDescription ="Icon",
             modifier = Modifier.size(300.dp)
         )
@@ -54,9 +55,9 @@ fun HomeScreen(navController:NavController){
 
 
         Text(
-            text = "SellApy",
+            text = "MINDTIVITY",
             fontSize = 40.sp,
-            fontFamily = FontFamily.Cursive,
+            fontFamily = FontFamily.Monospace,
             color = orange
         )
         Spacer(modifier = Modifier.height(10.dp))

@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import com.example.mindtivity.R
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -33,6 +34,8 @@ import androidx.navigation.NavController
 import com.example.mindtivity.navigation.ROUT_SIGNUP
 import com.example.mindtivity.ui.theme.ory
 import com.example.mindtivity.ui.theme.pastory
+import com.example.mindtivity.ui.theme.pastpurple
+import com.example.mindtivity.ui.theme.purple
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -54,9 +57,8 @@ fun SplashScreen(navController: NavController){
 
         Card(modifier = Modifier
             .fillMaxWidth()
-            .height(400.dp),
-            shape = RoundedCornerShape(bottomStart = 50.dp, bottomEnd = 50.dp),
-            colors = CardDefaults.cardColors(pastory)
+            .height(5600.dp),
+            colors = CardDefaults.cardColors(pastpurple)
 
         ){
             Column(verticalArrangement = Arrangement.Center,
@@ -65,20 +67,21 @@ fun SplashScreen(navController: NavController){
             ){
 
                 Image(
-                    painter =painterResource(id = R.drawable.icon) ,
+                    painter =painterResource(id = R.drawable.img_4) ,
                     contentDescription ="product",
                     modifier = Modifier.size(200.dp)
                 )
                 Text(
-                    text = "Welcome to SellAppy",
-                    fontSize = 50.sp,
+                    text = "Welcome to Mindivity",
+                    fontSize = 40.sp,
                     color = Color.White,
                     fontFamily = FontFamily.Cursive
                 )
                 Text(
-                    text = " The home of fashion",
+                    text = " Ellevate Your Mental Wellness Journey ",
                     fontSize = 20.sp,
                     color = Color.White,
+                    fontWeight = FontWeight.ExtraBold
                 )
 
             }
@@ -87,27 +90,8 @@ fun SplashScreen(navController: NavController){
         Spacer(modifier = Modifier.height(50.dp))
 
 
-        Text(
-            text = "E-commerce (electronic commerce) is the exchange of goods and services and the transmission of funds and data over the internet. ",
-            fontSize = 20.sp,
-            color = Color.Black,
-            modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center
-        )
-        Spacer(modifier = Modifier.height(10.dp))
 
 
-        Button(
-            onClick = { navController.navigate(ROUT_SIGNUP) },
-            colors = ButtonDefaults.buttonColors(ory),
-            shape = RoundedCornerShape(10.dp),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 30.dp, end = 30.dp)
-
-            ) {
-            Text(text = "Continue")
-        }
 
     }
 
