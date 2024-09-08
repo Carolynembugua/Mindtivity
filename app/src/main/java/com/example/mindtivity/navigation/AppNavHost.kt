@@ -13,14 +13,13 @@ import com.example.mindtivity.ui.theme.screens.products.AddProductsScreen
 import com.example.mindtivity.ui.theme.screens.products.ViewProductsScreen
 import com.example.mindtivity.ui.theme.screens.signup.SignupScreen
 import com.example.mindtivity.ui.theme.screens.splash.SplashScreen
-import com.example.mindtivity.ui.theme.screens.startup.StartupScreen
 
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination:String = ROUT_SPLASH
+    startDestination:String = ROUT_HOME
 ) {
     NavHost(
         navController = navController,
@@ -52,7 +51,7 @@ fun AppNavHost(
             ViewProductsScreen(navController = navController)
         }
         composable(ROUT_STARTUP) {
-            StartupScreen(navController = navController)
+            LoginScreen(navController = navController)
         }
 
 
