@@ -41,6 +41,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.mindtivity.R
 import com.example.mindtivity.data.AuthViewModel
 import com.example.mindtivity.navigation.ROUT_LOGIN
+import com.example.mindtivity.ui.theme.blue
 import com.example.mindtivity.ui.theme.orange
 import com.example.mindtivity.ui.theme.pastpurple
 
@@ -49,10 +50,10 @@ import com.example.mindtivity.ui.theme.pastpurple
 fun SignupScreen(navController: NavController){
     Column(modifier = Modifier
         .fillMaxSize()
-        .paint(painterResource(id = R.drawable.img_5), contentScale = ContentScale.FillBounds),
+        .paint(painterResource(id = R.drawable.img_9), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally){
         Image(
-            painter = painterResource(id = R.drawable.img_4) ,
+            painter = painterResource(id = R.drawable.img_8) ,
             contentDescription ="Icon",
             modifier = Modifier.size(200.dp)
         )
@@ -96,7 +97,7 @@ fun SignupScreen(navController: NavController){
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 10.dp, end = 10.dp),
-            leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = "person", tint = orange)},//to move add trailing
+            leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = "person", tint = blue)},//to move add trailing
             label = { Text(text = "Email Address")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
         )
@@ -107,7 +108,7 @@ fun SignupScreen(navController: NavController){
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 10.dp, end = 10.dp),
-            leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "person", tint = orange)},//to move add trailing
+            leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "person", tint = blue)},//to move add trailing
             label = { Text(text = "Password")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             visualTransformation = PasswordVisualTransformation()
@@ -119,7 +120,7 @@ fun SignupScreen(navController: NavController){
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 10.dp, end = 10.dp),
-            leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "person", tint = orange)},//to move add trailing
+            leadingIcon = { Icon(imageVector = Icons.Default.Lock, contentDescription = "person", tint = blue)},//to move add trailing
             label = { Text(text = "Confirm Password")},
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             visualTransformation = PasswordVisualTransformation()
@@ -132,7 +133,7 @@ fun SignupScreen(navController: NavController){
             authViewModel.signup(name, email, password,confpassword)
 
         },
-            colors = ButtonDefaults.buttonColors(orange),
+            colors = ButtonDefaults.buttonColors(blue),
             shape = RoundedCornerShape(10.dp),
 
             ) {

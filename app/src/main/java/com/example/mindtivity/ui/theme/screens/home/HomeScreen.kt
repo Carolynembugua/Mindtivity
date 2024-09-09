@@ -4,14 +4,18 @@ package com.example.mindtivity.ui.theme.screens.home
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -60,8 +64,12 @@ import com.example.mindtivity.ui.theme.pastpurple
 import com.example.mindtivity.ui.theme.screens.products.bottomNavItems
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.text.font.FontWeight
+import com.example.mindtivity.navigation.ROUT_HOME
+import com.example.mindtivity.ui.theme.blue
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -90,7 +98,7 @@ fun HomeScreen(navController:NavController){
                 .fillMaxWidth()
                 .padding(start = 20.dp, end = 20.dp)
                 .height(100.dp)
-                ,
+            ,
 
             leadingIcon = { Icon(imageVector = Icons.Default.Search, contentDescription = "search")},// FOR ICON TO BE AT BEGINNING
             placeholder = {
@@ -177,7 +185,7 @@ fun HomeScreen(navController:NavController){
 
 
 
-        )
+            )
     }
 }
 
@@ -185,33 +193,7 @@ fun HomeScreen(navController:NavController){
 
 
 
-//carries how you see the images
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//carries how you see the i
 @Composable
 @Preview(showBackground = true)
 fun HomeScreenPreview(){

@@ -33,6 +33,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.NavController
 import com.example.mindtivity.navigation.ROUT_SIGNUP
 import com.example.mindtivity.ui.theme.ory
+import com.example.mindtivity.ui.theme.pastblue
 import com.example.mindtivity.ui.theme.pastory
 import com.example.mindtivity.ui.theme.pastpurple
 import com.example.mindtivity.ui.theme.purple
@@ -58,7 +59,7 @@ fun SplashScreen(navController: NavController){
         Card(modifier = Modifier
             .fillMaxWidth()
             .height(5600.dp),
-            colors = CardDefaults.cardColors(pastpurple)
+            colors = CardDefaults.cardColors(pastblue)
 
         ){
             Column(verticalArrangement = Arrangement.Center,
@@ -67,18 +68,20 @@ fun SplashScreen(navController: NavController){
             ){
 
                 Image(
-                    painter =painterResource(id = R.drawable.img_4) ,
+                    painter =painterResource(id = R.drawable.img_8) ,
                     contentDescription ="product",
                     modifier = Modifier.size(200.dp)
                 )
+                Spacer(modifier = Modifier.height(50.dp))
+
                 Text(
-                    text = "Welcome to Mindivity",
+                    text = "Welcome to RESIDY",
                     fontSize = 40.sp,
                     color = Color.White,
-                    fontFamily = FontFamily.Cursive
+                    fontFamily = FontFamily.Monospace
                 )
                 Text(
-                    text = " Ellevate Your Mental Wellness Journey ",
+                    text = " Find your Perfect Place ",
                     fontSize = 20.sp,
                     color = Color.White,
                     fontWeight = FontWeight.ExtraBold

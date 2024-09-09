@@ -44,7 +44,9 @@ import androidx.navigation.compose.rememberNavController
 import com.example.mindtivity.R
 import com.example.mindtivity.data.AuthViewModel
 import com.example.mindtivity.navigation.ROUT_SIGNUP
+import com.example.mindtivity.ui.theme.blue
 import com.example.mindtivity.ui.theme.orange
+import com.example.mindtivity.ui.theme.pastblue
 import com.example.mindtivity.ui.theme.pastpurple
 
 
@@ -52,7 +54,7 @@ import com.example.mindtivity.ui.theme.pastpurple
 fun LoginScreen(navController: NavController){
    Column(modifier = Modifier
       .fillMaxSize()
-      .paint(painterResource(id = R.drawable.img_5), contentScale = ContentScale.FillBounds),
+      .paint(painterResource(id = R.drawable.img_9), contentScale = ContentScale.FillBounds),
    horizontalAlignment = Alignment.CenterHorizontally){
 
 
@@ -67,7 +69,7 @@ fun LoginScreen(navController: NavController){
          text = "Welcome Back",
          fontSize = 40.sp,
          fontFamily = FontFamily.Cursive,
-         color = pastpurple
+         color = pastblue
       )
       Spacer(modifier = Modifier.height(10.dp))
 
@@ -116,7 +118,7 @@ fun LoginScreen(navController: NavController){
          Button(onClick = {
             authViewModel.login(email, password)
          },
-            colors = ButtonDefaults.buttonColors(orange),
+            colors = ButtonDefaults.buttonColors(blue),
             shape = RoundedCornerShape(10.dp),
 
             ) {
@@ -126,7 +128,7 @@ fun LoginScreen(navController: NavController){
          Button(onClick = {
             authViewModel.adminlogin(email, password)
          },
-            colors = ButtonDefaults.buttonColors(orange),
+            colors = ButtonDefaults.buttonColors(blue),
             shape = RoundedCornerShape(10.dp),
 
             ) {

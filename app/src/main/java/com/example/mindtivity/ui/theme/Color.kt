@@ -15,4 +15,6 @@ val ory = Color(0xFFF74A3E)
 val pastory = Color(0xFFFF7D74)
 val purple = Color(0xFF8C6792)
 val pastpurple = Color(0xFFD29ADB)
+val pastblue = Color(0xFF8BB3B8)
+val blue = Color(0xFF95B7D3)
 
