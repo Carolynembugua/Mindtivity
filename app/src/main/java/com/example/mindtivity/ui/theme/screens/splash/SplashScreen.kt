@@ -72,11 +72,11 @@ fun SplashScreen(navController: NavController){
                     contentDescription ="product",
                     modifier = Modifier.size(200.dp)
                 )
-                Spacer(modifier = Modifier.height(50.dp))
+                Spacer(modifier = Modifier.height(20.dp))
 
                 Text(
                     text = "Welcome to RESIDY",
-                    fontSize = 40.sp,
+                    fontSize = 30.sp,
                     color = Color.White,
                     fontFamily = FontFamily.Monospace
                 )
@@ -90,7 +90,6 @@ fun SplashScreen(navController: NavController){
             }
 
         }
-        Spacer(modifier = Modifier.height(50.dp))
 
 
 

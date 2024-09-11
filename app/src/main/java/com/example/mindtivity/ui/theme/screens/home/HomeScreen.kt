@@ -106,8 +106,11 @@ fun HomeScreen(navController:NavController){
                     text = " Find the perfect place ",
                     fontSize = 25.sp,
                     fontWeight = FontWeight.SemiBold,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.Monospace,
+                    modifier = Modifier.padding(start = 10.dp, end = 10.dp)
+
                 )
+
 
             }
         )
@@ -193,7 +196,6 @@ fun HomeScreen(navController:NavController){
 
 
 
-//carries how you see the i
 @Composable
 @Preview(showBackground = true)
 fun HomeScreenPreview(){

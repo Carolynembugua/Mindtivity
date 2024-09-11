@@ -40,8 +40,6 @@ class AuthViewModel(var navController: NavController, var context: Context){
                     regRef.setValue(userdata).addOnCompleteListener {
 
                         if (it.isSuccessful){
-                            navController.navigate(ROUT_LOGIN)
-
                             Toast.makeText(context,"Registered Successfully", Toast.LENGTH_LONG).show()
                             navController.navigate(ROUT_LOGIN)
 
@@ -63,7 +61,7 @@ class AuthViewModel(var navController: NavController, var context: Context){
         if (email.isBlank() || password.isBlank()){
             Toast.makeText(context,"Please email and password cannot be blank", Toast.LENGTH_LONG).show()
         }
-        else if (email == "carol@gmail.com" && password == "123456"){
+        else if (email == "admin@gmail.com" && password == "123456"){
             navController.navigate(ROUT_LOGIN)
         }
         else {
