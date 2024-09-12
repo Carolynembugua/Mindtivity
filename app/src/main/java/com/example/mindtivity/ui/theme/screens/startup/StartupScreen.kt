@@ -130,7 +130,7 @@ fun StartupScreen(navController: NavController) {
                                    .padding(8.dp), // Padding inside the circle
                                contentAlignment = Alignment.Center // Center the icon in the circle
                            ) {
-                               IconWithBadgeAndText(
+                               Icon(
                                    icon = ImageVector.vectorResource(id = R.drawable.img_11),
                                    badgeCount = 9, // Example badge count
                                    text = "Bedrooms",
@@ -154,9 +154,13 @@ fun StartupScreen(navController: NavController) {
                                contentAlignment = Alignment.Center // Center the icon in the circle
                            ) {
                                Icon(
-                                   painter = painterResource(id = R.drawable.img_12),
-                                   contentDescription = "Centered Icon",
-                                   tint = iconColor
+                                   icon = ImageVector.vectorResource(id = R.drawable.img_12),
+                                   badgeCount = 9, // Example badge count
+                                   text = "Bedrooms",
+                                   modifier = Modifier
+                                       .size(80.dp) // Size of the entire element (icon + text)
+                                       .padding(8.dp) // Padding around the element
+
                                )
 
                            }
@@ -173,9 +177,13 @@ fun StartupScreen(navController: NavController) {
                                contentAlignment = Alignment.Center // Center the icon in the circle
                            ) {
                                Icon(
-                                   painter = painterResource(id = R.drawable.img_13),
-                                   contentDescription = "Centered Icon",
-                                   tint = iconColor
+                                   icon = ImageVector.vectorResource(id = R.drawable.img_13),
+                                   badgeCount = 9, // Example badge count
+                                   text = "Bedrooms",
+                                   modifier = Modifier
+                                       .size(80.dp) // Size of the entire element (icon + text)
+                                       .padding(8.dp) // Padding around the element
+
                                )
 
                            }
@@ -192,13 +200,31 @@ fun StartupScreen(navController: NavController) {
                                contentAlignment = Alignment.Center // Center the icon in the circle
                            ) {
                                Icon(
-                                   painter = painterResource(id = R.drawable.img_14),
-                                   contentDescription = "Centered Icon",
-                                   tint = iconColor
+                                   icon = ImageVector.vectorResource(id = R.drawable.img_14),
+                                   badgeCount = 9, // Example badge count
+                                   text = "Bedrooms",
+                                   modifier = Modifier
+                                       .size(80.dp) // Size of the entire element (icon + text)
+                                       .padding(8.dp) // Padding around the element
+
                                )
 
                            }
                            Spacer(modifier = Modifier.size(16.dp))
+                           Row {
+                               Column {
+                                   Text(text = "Ksh 30,000")
+
+                                   Button(
+                                       onClick = { /*TODO*/ },
+
+
+                                   ) {
+                                       Text(text = "Book Now")
+
+                                   }
+                               }
+                           }
 
 
 
@@ -228,7 +254,7 @@ fun StartupScreen(navController: NavController) {
     }
 }
 @Composable
-fun  IconWithBadgeAndText(
+fun  Icon(
     icon: ImageVector,
     badgeCount: Int,
     text: String,

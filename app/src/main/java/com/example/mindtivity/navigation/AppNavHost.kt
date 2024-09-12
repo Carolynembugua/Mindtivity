@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.mindtivity.ui.theme.screens.about.AboutScreen
+import com.example.mindtivity.ui.theme.screens.details.DetailsScreen
 import com.example.mindtivity.ui.theme.screens.home.HomeScreen
 import com.example.mindtivity.ui.theme.screens.login.LoginScreen
 import com.example.mindtivity.ui.theme.screens.products.AddProductsScreen
@@ -54,6 +55,10 @@ fun AppNavHost(
         composable(ROUT_STARTUP) {
            StartupScreen(navController = navController)
         }
+        composable(ROUT_DETAILS) {
+           DetailsScreen(navController = navController)
+        }
+
 
 
     }

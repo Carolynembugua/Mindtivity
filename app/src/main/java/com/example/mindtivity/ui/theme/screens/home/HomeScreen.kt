@@ -70,6 +70,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.text.font.FontWeight
 import com.example.mindtivity.navigation.ROUT_HOME
 import com.example.mindtivity.ui.theme.blue
+import com.example.mindtivity.ui.theme.pastblue
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -83,8 +84,6 @@ fun HomeScreen(navController:NavController){
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ){
-
-
 
         Spacer(modifier = Modifier.size(10.dp))
 
@@ -131,7 +130,7 @@ fun HomeScreen(navController:NavController){
                                 BadgedBox(
                                     badge = {
                                         if (bottomNavItem.badges != 0) {
-                                            Badge (containerColor = Color.White){
+                                            Badge (containerColor = (pastblue)){
                                                 Text(text = bottomNavItem.badges.toString())
                                             }
                                         } else if (bottomNavItem.hasNews) {
@@ -159,7 +158,7 @@ fun HomeScreen(navController:NavController){
             floatingActionButton = {
                 FloatingActionButton(
                     onClick = { /*TODO*/ },
-                    containerColor = Color.LightGray) {
+                    containerColor = (blue)) {
                     IconButton(onClick = {
                         navController.navigate(ROUT_LOGIN)
                     }) {
